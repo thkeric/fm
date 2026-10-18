@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetBills — case study — Eric Kim</title>
+<meta name="description" content="BudgetBills: a budgeting app with bill-splitting, from survey and usability testing to hi-fi design.">
+<meta property="og:title" content="BudgetBills — case study — Eric Kim">
+<meta property="og:description" content="BudgetBills: a budgeting app with bill-splitting, from survey and usability testing to hi-fi design.">
+<meta name="theme-color" content="#0F1318">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&amp;family=Barlow+Condensed:wght@600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0F1318}
+html{scroll-behavior:smooth}
+a{color:#FFB547}a:hover{color:#FFD08A}
+:focus-visible{outline:3px solid #FFB547;outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:16px;top:-80px;z-index:10;background:#FFB547;color:#1A1204;padding:12px 16px;border-radius:4px;font-weight:600;text-decoration:none}
+.skip:focus{top:16px;color:#1A1204}
+.navlink{color:#ECEFF3;text-decoration:none}
+.navlink:hover{color:#FFB547}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+<div style="position: relative; min-height: 100vh; background: #0F1318; color: #ECEFF3; font-family: 'Barlow', system-ui, sans-serif; font-size: 17px; line-height: 1.6">
+<a class="skip" href="#main">Skip to content</a>
+
+<header style="border-bottom: 1px solid #2A3340; background: #0F1318">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; justify-content: space-between">
+<a href="index.html" class="navlink" style="display: flex; align-items: center; gap: 12px; min-height: 44px">
+<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="#FFB547" stroke-width="2"></polygon><text x="20" y="25" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="15" fill="#ECEFF3">EK</text></svg>
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px">Eric Kim</span>
+</a>
+<nav aria-label="Primary">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 8px">
+<li><a href="index.html" class="navlink" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-weight: 500">← All work</a></li>
+<li><a href="ignis-oasis.html" class="navlink" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-weight: 500">Next: Ignis Oasis</a></li>
+<li><a href="mailto:ericthk.ux@gmail.com" class="navlink" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-weight: 500">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="main">
+
+<section aria-labelledby="title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">CASE STUDY 02 · FINANCE APP UX</p>
+<h1 id="title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(56px, 8vw, 104px); line-height: 0.95">BudgetBills</h1>
+<p style="margin: 0; font-size: clamp(20px, 2.2vw, 26px); max-width: 32em">Splitting the bill is a relationship problem, not a maths problem.</p>
+<dl style="margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1px; background: #2A3340; border: 1px solid #2A3340; border-radius: 6px; overflow: hidden">
+<div style="background: #161B22; padding: 16px 20px"><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B4C0; letter-spacing: 1px">ROLE</dt><dd style="margin: 4px 0 0">Solo — research, IA, wireframes, <br>hi-fi, testing</dd></div>
+<div style="background: #161B22; padding: 16px 20px"><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B4C0; letter-spacing: 1px">TIMELINE</dt><dd style="margin: 4px 0 0">Oct – Dec 2024</dd></div>
+<div style="background: #161B22; padding: 16px 20px"><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B4C0; letter-spacing: 1px">CONTEXT</dt><dd style="margin: 4px 0 0">MSc · Fundamentals of UX Design, University of Edinburgh</dd></div>
+<div style="background: #161B22; padding: 16px 20px"><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B4C0; letter-spacing: 1px">TOOLS</dt><dd style="margin: 4px 0 0">Figma · Balsamiq · Google Forms · Zoom / Teams</dd></div>
+</dl>
+</section>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+<img src="assets/bb-start-v2.webp" alt="BudgetBills first-run flow in sixteen screens: logo animation, four onboarding screens, sign-up, a loading spinner, sign-up success, and the home screen loading." style="display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid #2A3340; background: #000000">
+</div>
+
+<section aria-labelledby="glance-title" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 24px">
+<h2 id="glance-title" style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 1.5px; color: #A9B4C0">AT A GLANCE</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: #2A3340; border: 1px solid #2A3340; border-radius: 6px; overflow: hidden">
+<div style="background: #161B22; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; color: #FFB547">Brief</h3>
+<p style="margin: 0">A budgeting app with bill-splitting built in, designed and tested solo in one course.</p>
+</div>
+<div style="background: #161B22; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; color: #FFB547">What research changed</h3>
+<p style="margin: 0">Only 1 in 5 people often ran into disputes over a split, but almost half said talking about money was the hard part. Splitting moved inside the spending flow instead of living in its own app.</p>
+</div>
+<div style="background: #161B22; padding: 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; color: #FFB547">What testing caught</h3>
+<p style="margin: 0">Four of six tasks passed with everyone. One failed with everyone: nobody could find how to add a card.</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="research-title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">01 / RESEARCH</p>
+<h2 id="research-title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(36px, 4.2vw, 52px); line-height: 1">Four competitors, 40 surveys, 3 interviews</h2>
+<p style="margin: 0; max-width: 46em">I compared Pocketguard, YNAB, Monzo and Credit Karma, then ran a survey and three interviews. Under-18s were excluded, and every participant got an information sheet and a consent form.</p>
+</div>
+
+<figure style="margin: 0">
+<img src="assets/bb-competitors.webp" alt="Competitor table listing pros and cons of Pocketguard, YNAB, Monzo and Credit Karma." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #FFFFFF">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Competitor scan: what four apps people already use do well, and where they fall short.</figcaption>
+</figure>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px">
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 20px 24px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 48px; line-height: 1">20%</span>
+<span style="color: #A9B4C0">often run into disputes when splitting (8 of 40)</span>
+</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 20px 24px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #FFB547">47.5%</span>
+<span style="color: #A9B4C0">named talking about money as the challenge (19 of 40)</span>
+</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 20px 24px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 48px; line-height: 1">90%</span>
+<span style="color: #A9B4C0">want splitting tied to how they already pay (36 of 40)</span>
+</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 20px 24px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 48px; line-height: 1">70%</span>
+<span style="color: #A9B4C0">use no finance app besides their bank (28 of 40)</span>
+</li>
+</ul>
+
+<figure style="margin: 0; background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 28px">
+<figcaption style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 24px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px">What makes splitting the bill hard?</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9B4C0">Select all that apply · n = 40 · count of respondents</span>
+</figcaption>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>Difficulty talking about money</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 100%; max-width: calc(100% - 48px); background: #FFB547; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">19</span></span></li>
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>A sense of unfairness</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 73.7%; background: #73A7FF; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">14</span></span></li>
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>Awkwardness</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 73.7%; background: #73A7FF; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">14</span></span></li>
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>Social status</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 57.9%; background: #73A7FF; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">11</span></span></li>
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>Cultural expectations</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 57.9%; background: #73A7FF; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">11</span></span></li>
+<li style="display: grid; grid-template-columns: minmax(150px, 280px) minmax(0, 1fr); gap: 16px; align-items: center"><span>Affordability</span><span style="display: flex; align-items: center; gap: 10px"><span aria-hidden="true" style="display: block; height: 16px; width: 52.6%; background: #73A7FF; border-radius: 2px"></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">10</span></span></li>
+</ul>
+<p style="margin: 20px 0 0; color: #A9B4C0">Most of the top answers are social. Only one person named the transfer itself.</p>
+</figure>
+
+<div style="background: #161B22; border: 1px solid #2A3340; border-left: 3px solid #FFB547; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #FFB547">THE INSIGHT</p>
+<p style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2">Only 17.5% asked for a bill-splitting feature, yet 90% wanted splitting tied to how they pay and 45% split often. So splitting belongs inside the spending flow, not in a separate app.</p>
+<p style="margin: 0; color: #A9B4C0">The most-wanted feature overall was real-time spending tracking (31 of 40). All three interviewees checked their spending daily, wanted real-time alerts, and preferred deep teal tones.</p>
+</div>
+</section>
+
+<section aria-labelledby="personas-title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">02 / PEOPLE AND SCOPE</p>
+<h2 id="personas-title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(36px, 4.2vw, 52px); line-height: 1">Three personas, four sections</h2>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px">
+<li><img src="assets/bb-persona2.webp" alt="Persona card: Molly Lee, a final-year student working part-time who wants an easy way to split bills with friends." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px"></li>
+<li><img src="assets/bb-persona3.webp" alt="Persona card: Olivia Hammond, a freelance software developer saving for her sons' college fund who wants a visual view of spending." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px"></li>
+<li><img src="assets/bb-persona1.webp" alt="Persona card: Jonathan Kirman, about to move cities for a new job, who needs a way to track expenses and savings." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px"></li>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #A9B4C0">Persona portraits are generated images.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">Cutting scope on purpose</h3>
+<p style="margin: 0">Tutor feedback and a four-week build window cut the information architecture to four areas.</p>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr)); gap: 12px">
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; text-align: center">Home</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; text-align: center">Budget</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; text-align: center">Bill</li>
+<li style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; text-align: center">Cards</li>
+</ul>
+</div>
+</section>
+
+<section aria-labelledby="design-title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">03 / DESIGN</p>
+<h2 id="design-title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(36px, 4.2vw, 52px); line-height: 1">Paper, then Balsamiq, then Figma</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<figure style="margin: 0; flex: 1.365 1 0; min-width: 260px">
+<img src="assets/bb-sketch1-h.webp" alt="Pencil sketches of two phone screens: a sign-in screen with the logo and input fields, and a card screen with a large card, list rows and a row of circular shortcuts." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #FFFFFF">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Sketch: sign-in and the card screen</figcaption>
+</figure>
+<figure style="margin: 0; flex: 1.432 1 0; min-width: 260px">
+<img src="assets/bb-sketch2-h.webp" alt="Pencil sketches of two phone screens titled Title: one with a pie chart, one with a bar chart, each above list rows and a row of circular shortcuts." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #FFFFFF">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Sketch: spending breakdowns</figcaption>
+</figure>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<figure style="margin: 0; flex: 0.694 1 0; min-width: 260px">
+<img src="assets/bb-lofi.webp" alt="Balsamiq low-fidelity wireframes for sign-in, bank linking, home, savings, transactions and spending." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #FFFFFF">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Balsamiq: the first full set of screens</figcaption>
+</figure>
+<figure style="margin: 0; flex: 1.027 1 0; min-width: 260px">
+<img src="assets/bb-flow.webp" alt="Wireframe flow map connecting sign-up, home dashboard, transactions, budget, profile, notifications, settings and spending screens with arrows." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #FFFFFF">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Wireframe flow map, used to plan the prototype links.</figcaption>
+</figure>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px">High fidelity</h3>
+<figure style="margin: 0">
+<img src="assets/bb-hf2-transaction.webp" alt="Six transaction screens: a donut chart of total monthly spending, with coffee, shopping, subscriptions and utilities highlighted in turn, and the cards listed below." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #000000">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Spending by category and by card: the data-dense core of the app.</figcaption>
+</figure>
+<figure style="margin: 0">
+<img src="assets/bb-hf2-split.webp" alt="Seven bill-splitting screens: friend list and history, hidden balance, choosing send or request, entering an amount, confirming, a loading spinner, and transfer completed." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #000000">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Splitting from inside the spending flow: pick friends, choose an amount, confirm.</figcaption>
+</figure>
+<figure style="margin: 0">
+<img src="assets/bb-hf2-budget.webp" alt="Eight budget screens with weekly and monthly bar charts, a month picker, and a slider for setting a budget." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #000000">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Budgets: weekly and monthly views, with a slider to set the limit.</figcaption>
+</figure>
+<figure style="margin: 0">
+<img src="assets/bb-hf2-chatbot.webp" alt="Twelve chatbot screens in two rows: guided questions and answer chips, an option to reach an agent, the four places the chatbot can take you, and an apology screen." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #000000">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">A chatbot as a second way in.</figcaption>
+</figure>
+<figure style="margin: 0">
+<img src="assets/bb-hf2-notify-profile.webp" alt="Seven screens: two notification screens listing real-time card transactions with a filter sheet, then five profile and badge screens." loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 6px; background: #000000">
+<figcaption style="margin-top: 10px; font-size: 15px; color: #A9B4C0">Real-time notifications, the most-wanted feature (first two), then profile and badges.</figcaption>
+</figure>
+<p style="margin: 0; font-size: 15px; color: #A9B4C0"><br></p>
+</div>
+</section>
+
+<section aria-labelledby="test-title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">04 / USABILITY TEST</p>
+<h2 id="test-title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(36px, 4.2vw, 52px); line-height: 1">Six tasks, three people, one clear failure</h2>
+<p style="margin: 0; max-width: 46em">28–30 November 2024, remote over Zoom and Teams. Three participants with low, medium and high experience of finance apps, about 15 minutes each. I measured success rate, time on task and errors.</p>
+</div>
+<figure style="margin: 0; background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: 28px">
+<figcaption style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px">Task success</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9B4C0">● completed · ○ not completed · one mark per participant</span>
+</figcaption>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #2A3340"><span>Use the chatbot</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">3 of 3</span></li>
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #2A3340"><span>Check notifications</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">3 of 3</span></li>
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #2A3340"><span>Set a budget</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">3 of 3</span></li>
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #2A3340"><span>Send money</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">3 of 3</span></li>
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #2A3340"><span>Find your badges</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #73A7FF"></span><span style="box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #A9B4C0"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">2 of 3</span></li>
+<li style="display: grid; grid-template-columns: minmax(140px, 260px) auto minmax(60px, 1fr); gap: 16px; align-items: center; padding: 12px 0"><span style="font-weight: 600; color: #FFB547">Add a card (task 4)</span><span aria-hidden="true" style="display: flex; gap: 8px"><span style="box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #FFB547"></span><span style="box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #FFB547"></span><span style="box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #FFB547"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; color: #FFB547">0 of 3</span></li>
+</ul>
+<p style="margin: 20px 0 0; color: #A9B4C0">Visual ratings from the three testers: 8, 8 and 8.5. Tutor feedback on the look: "readable and neat but no character to show brand."</p>
+</figure>
+</section>
+
+<section aria-labelledby="reflect-title" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px">
+<div style="background: #161B22; border: 1px solid #2A3340; border-radius: 6px; padding: clamp(28px, 5vw, 64px); display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1.5px; color: #FFB547">05 / REFLECTION</p>
+<h2 id="reflect-title" style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(36px, 5vw, 64px); line-height: 1">Passing a task isn't the same as solving the problem.</h2>
+<p style="margin: 0; font-size: 19px; max-width: 44em">Everyone completed the transfer, 3 of 3. But the research said the hard part was being the one who brings money up first, and nothing in my design touched that. The test measured the flow I built, not the problem I found.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 28px 40px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid #3A4555">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; color: #FFB547">WHAT THE TEST CAUGHT</p>
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1">An icon nobody could read</h3>
+<p style="margin: 0; color: #A9B4C0">&quot;Add card&quot; sat behind a barcode-scan icon in the top-left corner. None of the three testers read it as &quot;add a card&quot;: 0 of 3.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid #3A4555">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; color: #FFB547">WHAT I GOT WRONG</p>
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1">Clean isn't the same as clear</h3>
+<p style="margin: 0; color: #A9B4C0">Removing the bottom tab bar hid the obvious route to Cards, and an inactive credit-score card took the best space on the home screen.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid #3A4555">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; color: #FFB547">WHAT I'D CHANGE NEXT</p>
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1">Words, routes, priorities</h3>
+<p style="margin: 0; color: #A9B4C0">Bring back persistent navigation, label &quot;Add card&quot; in words, and move the credit-score card off the top of home.</p>
+</div>
+</div>
+</div>
+</section>
+
+<nav aria-label="Case studies" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; border-top: 1px solid #2A3340; padding-top: 32px">
+<a href="thryve.html" style="display: flex; flex-direction: column; gap: 4px; padding: 20px; min-height: 44px; background: #161B22; border: 1px solid #2A3340; border-radius: 6px; text-decoration: none; color: #ECEFF3"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9B4C0">PREVIOUS CASE STUDY</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px">← Thryve</span></a>
+<a href="ignis-oasis.html" style="display: flex; flex-direction: column; gap: 4px; padding: 20px; min-height: 44px; background: #161B22; border: 1px solid #2A3340; border-radius: 6px; text-decoration: none; color: #ECEFF3; text-align: right"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9B4C0">NEXT CASE STUDY</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px">Ignis Oasis →</span></a>
+</div>
+</nav>
+
+</main>
+</div>
+</body>
+</html>
